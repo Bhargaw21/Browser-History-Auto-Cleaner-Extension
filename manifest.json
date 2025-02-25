@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "History Auto-Cleaner",
+    "version": "2.1",
+    "description": "Automatically deletes browser history after a set time with enhanced features.",
+    "permissions": ["browsingData", "history", "storage", "alarms", "notifications"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    }
+  }
+  

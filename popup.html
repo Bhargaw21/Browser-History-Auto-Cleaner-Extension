@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Auto-Cleaner</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧹 History Auto-Cleaner</h1>
+
+        <!-- Toggle switch -->
+        <label class="switch">
+            <input type="checkbox" id="toggleEnabled">
+            <span class="slider"></span>
+        </label>
+        <span id="statusText">Disabled</span>
+
+        <!-- Global Interval Setting -->
+        <div class="setting">
+            <label for="interval">Auto-Clean Interval (mins):</label>
+            <input type="number" id="interval" min="1" max="60">
+        </div>
+
+        <!-- Per-Site Cleaning Settings -->
+        <div class="setting">
+            <label for="siteInput">Custom Site Interval:</label>
+            <input type="text" id="siteInput" placeholder="example.com">
+            <input type="number" id="siteInterval" min="1" max="60">
+            <button id="addSite">➕ Add</button>
+        </div>
+
+        <ul id="siteList"></ul>
+
+        <button id="clearHistory">🧹 Clear History Now</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
